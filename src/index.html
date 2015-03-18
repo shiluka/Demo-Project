@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Intelli Snippets</title>
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <link href="css/jquery-ui.min.css" rel="stylesheet">
+   </head>
+   <body>
+      <br/><br/>
+      <div class="container">
+         <div class="form-group">
+            <label for="AddSnippet">Add Snippet</label>
+            <input type="text" class="form-control" id="inputSnippet" />
+            <input type="submit" value="add" onclick="addSnippetToJStorage()"/>
+         </div>
+         <div class="form-group">
+            <label for="feedback">Feedback</label>
+            <textarea rows="4" cols="50" class="form-control" id="feedback" ></textarea>
+         </div>
+      </div>
+      <script src="js/jquery-2.1.3.min.js"></script>
+      <script src="js/jquery-ui.min.js"></script>
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/jstorage.js"></script>
+      <script src="js/json2.js"></script>
+      <script>
+         //dummy snippets storage
+         
+         var tempSnippets = [];
+         
+         $.getJSON('data.json', function(data) {
+         
+             for (var i in data.snippets) {
+                 $.jStorage.set(i,data.snippets[i]);
+                 tempSnippets[i] = data.snippets[i].value;
+             }
+         
+         });
+         
+         //add snippet to jstorage
+         function addSnippetToJStorage(){
+           
+                  var tempText = document.getElementById("inputSnippet").value;
+                  var size = $.jStorage.numberofSnippets();
+                  document.getElementById("inputSnippet").value = "";
+                  $.jStorage.set(size, tempText);
+                  tempSnippets[size] = tempText; 
+                  //alert('click event occured ' + tempText + '  ' + size + '  ' + $.jStorage.get(0).category);
+                  
+         }
+         
+         //snippet selection
+         function split( val ) {
+         return val.split( / \s*/ );
+         }
+         function extractLast( term ) {
+         return split( term ).pop();
+         }
+         $( "#feedback" )
+         .bind( "keydown", function( event ) {
+         if ( event.keyCode === $.ui.keyCode.TAB &&
+         $( this ).autocomplete( "instance" ).menu.active ) {
+         event.preventDefault();
+         }
+         })
+         .autocomplete({
+         minLength: 0,
+         source: function( request, response ) {
+         response( $.ui.autocomplete.filter(
+         tempSnippets, extractLast( request.term ) ) );
+         },
+         focus: function() {
+         return false;
+         },
+         select: function( event, ui ) {
+         var terms = split( this.value );
+         terms.pop();
+         terms.push( ui.item.value );
+         terms.push( "" );
+         this.value = terms.join( " " );
+         return false;
+         }
+         });
+      </script>
+   </body>
+</html>
