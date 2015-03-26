@@ -1,121 +1,56 @@
-{"snippets":[
-        {
-            "value":"Hello All",
-            "category":"",
-            "joined": {
-                "month":"January",
-                "day":12,
-                "year":2012
-            }
-        },
-        {
-            "value":"discussed",
-            "category":"",
-            "joined": {
-                "month":"April",
-                "day":28,
-                "year":2010
-            }
-        },
-        {
-            "value":"batch rep",
-            "category":"Villalobos",
-            "joined": {
-                "month":"January",
-                "day":12,
-                "year":2012
-            }
-        },
-        {
-            "value":"Cs3062 Theory of Computing",
-            "category":"",
-            "joined": {
-                "month":"April",
-                "day":28,
-                "year":2010
-            }
-        },
-        {
-            "value":"lecture",
-            "category":"",
-            "joined": {
-                "month":"January",
-                "day":12,
-                "year":2012
-            }
-        },
-        {
-            "value":"scheduled time",
-            "category":"",
-            "joined": {
-                "month":"April",
-                "day":28,
-                "year":2010
-            }
-        },
-        {
-            "value":"reschedule",
-            "category":"",
-            "joined": {
-                "month":"January",
-                "day":12,
-                "year":2012
-            }
-        },
-        {
-            "value":"please",
-            "category":"",
-            "joined": {
-                "month":"April",
-                "day":28,
-                "year":2010
-            }
-        },
-        {
-            "value":"Dear All",
-            "category":"",
-            "joined": {
-                "month":"January",
-                "day":12,
-                "year":2012
-            }
-        },
-        {
-            "value":"CS3022 Software Engineering",
-            "category":"",
-            "joined": {
-                "month":"April",
-                "day":28,
-                "year":2010
-            }
-        },
-        { 
-            "value":"grades",
-            "category":"",
-            "joined": {
-                "month":"April",
-                "day":28,
-                "year":2010
-            }
-        },
-        {
-            "value":"Moodle",
-            "category":"",
-            "joined": {
-                "month":"January",
-                "day":12,
-                "year":2012
-            }
-        },
-        {
-            "value":"available",
-            "category":"",
-            "joined": {
-                "month":"April",
-                "day":28,
-                "year":2010
-            }
-        }
-        
-
-]}
+{
+  "snippets": [
+    {
+      "value": "Hello All",
+      "category": ""
+    },
+    {
+      "value": "discussed",
+      "category": "verb"
+    },
+    {
+      "value": "batch rep",
+      "category": "noun"
+    },
+    {
+      "value": "Cs3062 Theory of Computing",
+      "category": "subject"
+    },
+    {
+      "value": "lecture",
+      "category": "noun"
+    },
+    {
+      "value": "scheduled time",
+      "category": ""
+    },
+    {
+      "value": "reschedule",
+      "category": "verb"
+    },
+    {
+      "value": "please",
+      "category": ""
+    },
+    {
+      "value": "Dear All",
+      "category": ""
+    },
+    {
+      "value": "CS3022 Software Engineering",
+      "category": "subject"
+    },
+    {
+      "value": "grades",
+      "category": "noun"
+    },
+    {
+      "value": "Moodle",
+      "category": "noun"
+    },
+    {
+      "value": "available",
+      "category": ""
+    }
+  ]
+}
