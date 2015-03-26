@@ -1,0 +1,24 @@
+{"taggedSnippets":[
+        {
+            "tagID":"1",
+            "key":"@CS3712",
+            "value":"CS3712 - Image Processing , Credits - 3",
+            "category":"",
+            "joined": {
+                "month":"January",
+                "day":12,
+                "year":2012
+            }
+        },
+        {
+            "tagID":"2",
+            "key":"@Leave",
+            "value":"I'm taking a leave this week.",
+            "category":"",
+            "joined": {
+                "month":"April",
+                "day":28,
+                "year":2010
+            }
+        }
+]}

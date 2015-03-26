@@ -1,0 +1,31 @@
+{"snippets_answers":[
+
+        {
+            "samp_ques_id":"LunaVersion",
+            "samp_ques":"why eclipse Luna version is recommended for build Teammates?",
+            "answer_snippet":"snippet_1",
+            "value":"This project is an open source project and all the contributors are students. We have standardised all the technologies so that debugging would be easier. Other versions would probably work, but for Luna we know that it will definitely work and we have experience contributors who can help you with any issues you might face with Luna.",
+            "category":"",
+            "joined": {
+                "month":"April",
+                "day":28,
+                "year":2010
+            }
+        },
+
+        {
+            "samp_ques_id":"tag snippet",
+            "samp_ques":"What is meant by Tagging snippets?",
+            "answer_snippet":"snippet_2",
+            "value":"Tagging snippets is meant as a mechanism for locating snippets later. Tags are like keywords that can be used to retrieve a snippet.",
+            "category":"",
+            "joined": {
+                "month":"April",
+                "day":28,
+                "year":2010
+            }
+        }
+
+
+
+]}

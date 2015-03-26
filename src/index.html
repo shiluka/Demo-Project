@@ -1,87 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <title>Intelli Snippets</title>
-      <link href="css/bootstrap.min.css" rel="stylesheet">
-      <link href="css/jquery-ui.min.css" rel="stylesheet">
-   </head>
-   <body>
-      <br/><br/>
-      <div class="container">
-         <div class="form-group">
+
+<head>
+    <meta charset="utf-8">
+    <title>Intelli Snippets</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <br/>
+    <br/>
+    <div class="container">
+        <div class="form-group">
             <label for="AddSnippet">Add Snippet</label>
             <input type="text" class="form-control" id="inputSnippet" />
-            <input type="submit" value="add" onclick="addSnippetToJStorage()"/>
-         </div>
-         <div class="form-group">
-            <label for="feedback">Feedback</label>
-            <textarea rows="4" cols="50" class="form-control" id="feedback" ></textarea>
-         </div>
-      </div>
-      <script src="js/jquery-2.1.3.min.js"></script>
-      <script src="js/jquery-ui.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/jstorage.js"></script>
-      <script src="js/json2.js"></script>
-      <script>
-         //dummy snippets storage
-         
-         var tempSnippets = [];
-         
-         $.getJSON('data.json', function(data) {
-         
-             for (var i in data.snippets) {
-                 $.jStorage.set(i,data.snippets[i]);
-                 tempSnippets[i] = data.snippets[i].value;
-             }
-         
-         });
-         
-         //add snippet to jstorage
-         function addSnippetToJStorage(){
-           
-                  var tempText = document.getElementById("inputSnippet").value;
-                  var size = $.jStorage.numberofSnippets();
-                  document.getElementById("inputSnippet").value = "";
-                  $.jStorage.set(size, tempText);
-                  tempSnippets[size] = tempText; 
-                  //alert('click event occured ' + tempText + '  ' + size + '  ' + $.jStorage.get(0).category);
-                  
-         }
-         
-         //snippet selection
-         function split( val ) {
-         return val.split( / \s*/ );
-         }
-         function extractLast( term ) {
-         return split( term ).pop();
-         }
-         $( "#feedback" )
-         .bind( "keydown", function( event ) {
-         if ( event.keyCode === $.ui.keyCode.TAB &&
-         $( this ).autocomplete( "instance" ).menu.active ) {
-         event.preventDefault();
-         }
-         })
-         .autocomplete({
-         minLength: 0,
-         source: function( request, response ) {
-         response( $.ui.autocomplete.filter(
-         tempSnippets, extractLast( request.term ) ) );
-         },
-         focus: function() {
-         return false;
-         },
-         select: function( event, ui ) {
-         var terms = split( this.value );
-         terms.pop();
-         terms.push( ui.item.value );
-         terms.push( "" );
-         this.value = terms.join( " " );
-         return false;
-         }
-         });
-      </script>
-   </body>
+            <input type="submit" value="add" onclick="addSnippet()" />
+        </div>
+        <div class="form-group">
+            <label for="feedback">Feedback (write own answer - get help with words)</label>
+            <textarea rows="4" cols="50" class="form-control" id="feedback"></textarea>
+        </div>
+
+        <!-- creating sample questions-->
+        <div class="form-group">
+            <label for="Sample_Question_1">Sample_Questions (with answers as snippets)</label>
+
+            <select id="questionList">
+                <option value="empty"></option>
+                <option value="why eclipse Luna version is recommended for build Teammates?">why eclipse Luna version is recommended for build Teammates?</option>
+                <option value="What is meant by Tagging snippets?">What is meant by Tagging snippets?</option>
+            </select>
+
+            <input type="text" value="" class="form-control" id="sample_question" readonly />
+
+        </div>
+        <div class="form-group">
+            <label for="answer">answer (get snippet for the question (press spacebar) ,,,, retrieve tagged snippet by typing '@')</label>
+            <textarea rows="4" cols="50" class="form-control" id="answer"></textarea>
+        </div>
+
+    </div>
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jstorage.js"></script>
+    <script src="js/json2.js"></script>
+
+    <!-- UI -->
+    <script src="js/jquery/jquery-2.1.3.min.js"></script>
+    <script src="js/jquery/jquery-ui.min.js"></script>
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+
+    <!-- JStorage -->
+    <script src="js/jStorage/jstorage.js"></script>
+    <script src="js/jStorage/json2.js"></script>
+
+    <!-- snippets as words, when instructor write his/her own answer -->
+    <script src="js/features/wordSnippet.js"></script>
+
+    <!-- snippets as answers , ability retreive tagged snippets-->
+    <script src="js/features/answerSnippet.js"></script>
+</body>
+
 </html>

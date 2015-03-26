@@ -1,0 +1,121 @@
+{"snippets":[
+        {
+            "value":"Hello All",
+            "category":"",
+            "joined": {
+                "month":"January",
+                "day":12,
+                "year":2012
+            }
+        },
+        {
+            "value":"discussed",
+            "category":"",
+            "joined": {
+                "month":"April",
+                "day":28,
+                "year":2010
+            }
+        },
+        {
+            "value":"batch rep",
+            "category":"Villalobos",
+            "joined": {
+                "month":"January",
+                "day":12,
+                "year":2012
+            }
+        },
+        {
+            "value":"Cs3062 Theory of Computing",
+            "category":"",
+            "joined": {
+                "month":"April",
+                "day":28,
+                "year":2010
+            }
+        },
+        {
+            "value":"lecture",
+            "category":"",
+            "joined": {
+                "month":"January",
+                "day":12,
+                "year":2012
+            }
+        },
+        {
+            "value":"scheduled time",
+            "category":"",
+            "joined": {
+                "month":"April",
+                "day":28,
+                "year":2010
+            }
+        },
+        {
+            "value":"reschedule",
+            "category":"",
+            "joined": {
+                "month":"January",
+                "day":12,
+                "year":2012
+            }
+        },
+        {
+            "value":"please",
+            "category":"",
+            "joined": {
+                "month":"April",
+                "day":28,
+                "year":2010
+            }
+        },
+        {
+            "value":"Dear All",
+            "category":"",
+            "joined": {
+                "month":"January",
+                "day":12,
+                "year":2012
+            }
+        },
+        {
+            "value":"CS3022 Software Engineering",
+            "category":"",
+            "joined": {
+                "month":"April",
+                "day":28,
+                "year":2010
+            }
+        },
+        { 
+            "value":"grades",
+            "category":"",
+            "joined": {
+                "month":"April",
+                "day":28,
+                "year":2010
+            }
+        },
+        {
+            "value":"Moodle",
+            "category":"",
+            "joined": {
+                "month":"January",
+                "day":12,
+                "year":2012
+            }
+        },
+        {
+            "value":"available",
+            "category":"",
+            "joined": {
+                "month":"April",
+                "day":28,
+                "year":2010
+            }
+        }
+        
+
+]}
