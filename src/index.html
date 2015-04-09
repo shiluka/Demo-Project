@@ -6,6 +6,7 @@
     <title>Demo</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/jquery-ui.min.css" rel="stylesheet">
+    <link href="css/table.css" rel="stylesheet">
 </head>
 
 <body>
@@ -39,6 +40,57 @@
             <label for="answer">answer (get snippet for the question (press spacebar) ,,,, retrieve tagged snippet by typing '@')</label>
             <textarea rows="4" cols="50" class="form-control" id="answer"></textarea>
         </div>
+        </br>
+        <!-- cosine similarity -->
+        <div class="form-group">
+            <h1>Cosine Similarity</h1>
+            <label for="question_1">sample question 1</label>
+            <input type="text" class="form-control" id="question_1" value="why eclipse Luna version is recommended for build Teammates" />
+            <label for="question_2">sample question 2</label>
+            <input type="text" class="form-control" id="question_2" value="eclipse Luna version is recommended for Teammates why" />
+            </br>
+            <input type="submit" value="Cosine Similarity" onclick="getCosineSimilarityValue()" />
+            </br>
+            </br>
+            <label for="cosine">cosine similarity value</label>
+            <input type="text" class="form-control" id="cosine" readonly />
+        </div>
+        <!-- statistical analysis for cosine similarity -->
+        <div class="table">
+            <table>
+                <tr>
+                    <th>Cosine Similarity Value</th>
+                    <th>Expectation</th>
+                    <th>Probability</th>
+                </tr>
+                <tr>
+                    <td>0.8 - 1.0</td>
+                    <td>Totally Same</td>
+                    <td>85%</td>
+                </tr>
+                <tr>
+                    <td>0.6 - 0.8</td>
+                    <td>Same</td>
+                    <td>75%</td>
+                </tr>
+                <tr>
+                    <td>0.4 - 0.6</td>
+                    <td>Same</td>
+                    <td>55%</td>
+                </tr>
+                <tr>
+                    <td>0.2 - 0.4</td>
+                    <td>Different</td>
+                    <td>70%</td>
+                </tr>
+                <tr>
+                    <td>0.0 - 0.2</td>
+                    <td>Totally Different</td>
+                    <td>90%</td>
+                </tr>
+            </table>
+        </div>
+
 
     </div>
 
@@ -56,6 +108,9 @@
 
     <!-- snippets as answers , ability retreive tagged snippets-->
     <script src="js/features/answerSnippet.js"></script>
+
+    <!-- cosine similarity value for two questions-->
+    <script src="js/features/cosine-similarity.js"></script>
 </body>
 
 </html>
